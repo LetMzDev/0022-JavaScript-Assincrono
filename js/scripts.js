@@ -24,3 +24,27 @@ function Ler_Conteudo_Do_Arquivo ( arquivo )
 		leitor.readAsDataURL ( arquivo );
 	});
 }
+
+const imagem_Principal = document.querySelector ( ".main-imagem" );
+const nome_Da_Imagem = document.querySelector ( ".container-imagem-nome p" );
+
+inputUpload.addEventListener ( "change", async ( evento ) =>
+{
+	const arquivo = evento.target.files [ 0 ];
+
+	if ( arquivo )
+	{
+		try
+		{
+			const conteudo_Do_Arquivo = await Ler_Conteudo_Do_Arquivo ( arquivo );
+			imagem_Principal.src = conteudo_Do_Arquivo.url;
+			nome_Da_Imagem.textContent = conteudo_Do_Arquivo.nome;
+		}
+
+		catch ( erro )
+		{
+			console.error ( "Erro na leitura do arquivo" );
+		}
+
+	}
+})
