@@ -77,6 +77,7 @@ input_Tags.addEventListener ( "keypress", ( evento ) =>
 
 lista_Tags.addEventListener ( "click", ( evento ) =>
 {
+	// Verifica se onde está sendo clicado contém a classe "remove-tag"
 	if (evento.target.classList.contains ( "remove-tag" ))
 	{
 		const tag_Que_Queremos_Remover = evento.target.parentElement;
