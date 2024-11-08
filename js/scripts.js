@@ -25,6 +25,8 @@ function Ler_Conteudo_Do_Arquivo ( arquivo )
 	});
 }
 
+// Ler arquivo de imagem
+
 const imagem_Principal = document.querySelector ( ".main-imagem" );
 const nome_Da_Imagem = document.querySelector ( ".container-imagem-nome p" );
 
@@ -49,6 +51,8 @@ inputUpload.addEventListener ( "change", async ( evento ) =>
 	}
 })
 
+// Adicionar Tags
+
 const input_Tags = document.getElementById ( "input-tags" );
 const lista_Tags = document.getElementById ( "lista-tags" );
 
@@ -66,5 +70,16 @@ input_Tags.addEventListener ( "keypress", ( evento ) =>
 			lista_Tags.appendChild ( tag_Nova );
 			input_Tags.value = "";
 		}
+	}
+})
+
+// Remover Tags
+
+lista_Tags.addEventListener ( "click", ( evento ) =>
+{
+	if (evento.target.classList.contains ( "remove-tag" ))
+	{
+		const tag_Que_Queremos_Remover = evento.target.parentElement;
+		lista_Tags.removeChild ( tag_Que_Queremos_Remover );
 	}
 })
