@@ -48,3 +48,23 @@ inputUpload.addEventListener ( "change", async ( evento ) =>
 
 	}
 })
+
+const input_Tags = document.getElementById ( "input-tags" );
+const lista_Tags = document.getElementById ( "lista-tags" );
+
+input_Tags.addEventListener ( "keypress", ( evento ) =>
+{
+	if ( evento.key === "Enter" )
+	{
+		evento.preventDefault(); // Não atualizar a tela após o ENTER
+		const tag_Texto = input_Tags.value.trim();
+
+		if ( tag_Texto !== "" )
+		{
+			const tag_Nova = document.createElement ( "li" );
+			tag_Nova.innerHTML = `<p>${tag_Texto}</p> <img src="./img/close-black.svg" class="remove-tag">`;
+			lista_Tags.appendChild ( tag_Nova );
+			input_Tags.value = "";
+		}
+	}
+})
