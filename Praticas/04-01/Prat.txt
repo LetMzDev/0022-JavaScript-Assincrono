@@ -1,0 +1,5 @@
+Exercício 1) Validação de E-mail em Formulário de Cadastro
+
+Conteúdo:
+
+Você está desenvolvendo um formulário de cadastro de usuários para um site. Um dos requisitos é validar se o e-mail inserido pelo usuário já está registrado no sistema antes de permitir o envio do formulário. A validação deve ser feita de forma assíncrona, consultando uma lista de e-mails previamente cadastrados.
