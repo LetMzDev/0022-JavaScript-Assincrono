@@ -1,0 +1,7 @@
+Exercício 2) Validação de Nome de Usuário em Plataforma de Jogos
+
+Conteúdo:
+
+Você está desenvolvendo uma plataforma de jogos online e precisa implementar uma funcionalidade para validar se o nome de usuário escolhido está disponível. A validação deve ocorrer de forma assíncrona, consultando uma lista de nomes de usuários já registrados, antes de permitir que o usuário finalize o cadastro.
+
+Implemente a funcionalidade de validação de nome de usuário em um formulário de cadastro. A função de validação deve verificar se o nome de usuário digitado já existe em uma lista de nomes registrados e fornecer feedback em tempo real.
