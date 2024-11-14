@@ -1,0 +1,5 @@
+Exercício 1) Adicionando tags dinamicamente com JavaScript
+
+Conteúdo:
+
+Você trabalha em um projeto web onde precisa adicionar dinamicamente tags a partir do input do usuário. O objetivo é permitir que os usuários insiram novas tags pressionando a tecla Enter e que estas tags sejam exibidas em uma lista na tela. Vamos implementar essa funcionalidade.
