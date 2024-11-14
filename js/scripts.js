@@ -117,3 +117,18 @@ input_Tags.addEventListener ( "keypress", async ( evento ) =>
 		}
 	}
 })
+
+const botao_Publicar = document.querySelector ( ".botao-publicar" );
+
+botao_Publicar.addEventListener ( "click",  ( evento ) =>
+{
+	evento.preventDefault();
+
+	const nome_Do_Projeto = document.getElementById ( "nome" ).value;
+	const descricao_Do_Projeto = document.getElementById ( "descricao" ).value;
+	const tags_Projeto = Array.from ( lista_Tags.querySelectorAll ( "p" )).map (( tag ) => tag.textContent );
+
+	console.log ( nome_Do_Projeto );
+	console.log ( descricao_Do_Projeto );
+	console.log ( tags_Projeto );
+})
