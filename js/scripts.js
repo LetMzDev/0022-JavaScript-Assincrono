@@ -84,3 +84,19 @@ lista_Tags.addEventListener ( "click", ( evento ) =>
 		lista_Tags.removeChild ( tag_Que_Queremos_Remover );
 	}
 })
+
+
+// Possíveis tags
+
+const tags_Disponiveis = [ "Front-end", "Programação", "Data Science", "Full-stack", "HTML", "CSS", "JavaScript" ];
+
+async function Verifica_Tags_Disponiveis ( tag_Texto )
+{
+	return new Promise (( resolve ) =>
+	{
+		setTimeout(() =>
+		{
+			resolve ( tags_Disponiveis.includes ( tag_Texto ));
+		}, 1000)
+	})
+}
