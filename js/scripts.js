@@ -118,6 +118,8 @@ input_Tags.addEventListener ( "keypress", async ( evento ) =>
 	}
 })
 
+// Obter dados do formulário
+
 const botao_Publicar = document.querySelector ( ".botao-publicar" );
 
 botao_Publicar.addEventListener ( "click",  ( evento ) =>
@@ -132,3 +134,23 @@ botao_Publicar.addEventListener ( "click",  ( evento ) =>
 	console.log ( descricao_Do_Projeto );
 	console.log ( tags_Projeto );
 })
+
+// simular envio de dados
+
+async function publicar_Projeto ( nome_Do_Projeto, descricao_Do_Projeto, tags_Projeto )
+{
+	return new Promise (( resolve, reject ) =>
+	{
+		setTimeout(() =>
+		{
+			const deu_Certo = Math.random() > 0.5;
+
+			if ( deu_Certo )
+				resolve ( "Projeto publicado com sucesso." );
+
+			else
+				reject ( "Erro ao publicar o projeto." );
+
+		}, 2000 )
+	})
+}
