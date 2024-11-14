@@ -1,0 +1,5 @@
+Exercício 2) Validação de formulário de cadastro com JavaScript
+
+Conteúdo:
+
+Você está desenvolvendo um sistema de cadastro de usuários e precisa validar os campos de um formulário antes de enviar os dados ao servidor. Os campos que precisam ser validados são: nome, e-mail e senha. A validação deve garantir que todos os campos estejam preenchidos e que o e-mail esteja em um formato válido.
