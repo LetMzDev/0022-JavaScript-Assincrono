@@ -118,22 +118,7 @@ input_Tags.addEventListener ( "keypress", async ( evento ) =>
 	}
 })
 
-// Obter dados do formulário
-
 const botao_Publicar = document.querySelector ( ".botao-publicar" );
-
-botao_Publicar.addEventListener ( "click",  ( evento ) =>
-{
-	evento.preventDefault();
-
-	const nome_Do_Projeto = document.getElementById ( "nome" ).value;
-	const descricao_Do_Projeto = document.getElementById ( "descricao" ).value;
-	const tags_Projeto = Array.from ( lista_Tags.querySelectorAll ( "p" )).map (( tag ) => tag.textContent );
-
-	console.log ( nome_Do_Projeto );
-	console.log ( descricao_Do_Projeto );
-	console.log ( tags_Projeto );
-})
 
 // simular envio de dados
 
@@ -154,3 +139,25 @@ async function publicar_Projeto ( nome_Do_Projeto, descricao_Do_Projeto, tags_Pr
 		}, 2000 )
 	})
 }
+
+botao_Publicar.addEventListener ( "click", async ( evento ) =>
+{
+	evento.preventDefault();
+
+	const nome_Do_Projeto = document.getElementById ( "nome" ).value;
+	const descricao_Do_Projeto = document.getElementById ( "descricao" ).value;
+	const tags_Projeto = Array.from ( lista_Tags.querySelectorAll ( "p" )).map (( tag ) => tag.textContent );
+
+	try
+	{
+		const resultado = await publicar_Projeto ( nome_Do_Projeto, descricao_Do_Projeto, tags_Projeto );
+		console.log ( resultado );
+		alert ( "Deu tudo certo!" );
+	}
+
+	catch ( error )
+	{
+		console.log ( "Deu errado: ", error );
+		alert ( "Deu tudo errado!" );
+	}
+})
